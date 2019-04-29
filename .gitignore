@@ -1,6 +1,9 @@
 # Mac settings
 *.DS*
 
+# Github
+*.gitignore*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
