@@ -4,7 +4,7 @@
 
 This repo is compatible with mybinder.org. Click the link below to launch a public online instance.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/baldwint/binder-postgres/postgres)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/julizhu/sql-training-tool/master)
 
 ## Use on your local machine
 
