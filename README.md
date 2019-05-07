@@ -1,4 +1,4 @@
-# Jupyter interface to Postgres
+# Jupyter Interface to Postgres
 
 ## Use with Binder
 
