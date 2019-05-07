@@ -1,4 +1,10 @@
-# set data directory and initialize
+# Set data directory and initialize
 export PGDATA=$HOME/pgsql/data
 mkdir -p "$PGDATA"
 pg_ctl initdb
+
+# Load in the data 
+pg_ctl start -l pglog
+psql -d postgres -f "content/data/load_tables.sql"
+pg_ctl stop
+
