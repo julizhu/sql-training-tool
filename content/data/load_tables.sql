@@ -34,13 +34,13 @@ create table film_actor(
 );
 
 create table film_category(
- film_id float,
+ film_id double precision,
  category_id int,
  last_update timestamp
 );
 
 create table address(
- address_id float primary key,
+ address_id int primary key,
  address varchar(200),
  address2 varchar(200),
  district varchar(100),
@@ -64,7 +64,7 @@ create table country(
 );
 
 create table customer(
- customer_id float primary key,
+ customer_id int primary key,
  store_id float,
  first_name varchar(100),
  last_name varchar(100),
@@ -128,7 +128,6 @@ create table store(
  address_id int,
  last_update varchar(50)
 );
-
 
 \copy actor from 'content/data/actor.csv' delimiter ',' csv header;
 \copy category from 'content/data/category.csv' delimiter ',' csv header;
