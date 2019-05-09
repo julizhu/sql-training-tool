@@ -15,7 +15,7 @@ create table film(
  film_id int primary key,
  title varchar(150),
  description varchar(300),
- release_year int,
+ release_year double precision,
  language_id int,
  rental_duration int,
  rental_rate double precision,
@@ -29,13 +29,13 @@ create table film(
 
 create table film_actor(
  actor_id int,
- film_id int,
+ film_id double precision,
  last_update timestamp
 );
 
 create table film_category(
  film_id double precision,
- category_id int,
+ category_id double precision,
  last_update timestamp
 );
 
@@ -134,13 +134,13 @@ create table store(
 \copy film from 'content/data/film.csv' delimiter ',' csv header;
 \copy film_actor from 'content/data/film_actor.csv' delimiter ',' csv header;
 \copy film_category from 'content/data/film_category.csv' delimiter ',' csv header;
-\copy language from 'content/data/address.csv' delimiter ',' csv header;
-\copy language from 'content/data/city.csv' delimiter ',' csv header;
-\copy language from 'content/data/country.csv' delimiter ',' csv header;
-\copy language from 'content/data/customer.csv' delimiter ',' csv header;
-\copy language from 'content/data/inventory.csv' delimiter ',' csv header;
+\copy address from 'content/data/address.csv' delimiter ',' csv header;
+\copy city from 'content/data/city.csv' delimiter ',' csv header;
+\copy country from 'content/data/country.csv' delimiter ',' csv header;
+\copy customer from 'content/data/customer.csv' delimiter ',' csv header;
+\copy inventory from 'content/data/inventory.csv' delimiter ',' csv header;
 \copy language from 'content/data/language.csv' delimiter ',' csv header;
-\copy language from 'content/data/payment.csv' delimiter ',' csv header;
+\copy payment from 'content/data/payment.csv' delimiter ',' csv header;
 \copy rental from 'content/data/rental.csv' delimiter ',' csv header;
-\copy language from 'content/data/staff.csv' delimiter ',' csv header;
-\copy language from 'content/data/store.csv' delimiter ',' csv header;
+\copy staff from 'content/data/staff.csv' delimiter ',' csv header;
+\copy store from 'content/data/store.csv' delimiter ',' csv header;
