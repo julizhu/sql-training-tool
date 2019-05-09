@@ -49,7 +49,7 @@ file_header = [['actor_id', 'first_name', 'last_name', 'last_update'],
 	['staff_id', 'first_name', 'last_name', 'address_id', 'email', 'store_id', 'active', 'username', 'password', 'last_update', 'picture'],
 	['store_id', 'manager_staff_id', 'address_id', 'last_update']]
 
-for i in xrange(len(input_file)):
+for i in range(len(input_file)):
 	df = pd.read_csv(input_file[i], sep=None, names=file_header[i], engine='python')
 	if output_file[i] == 'actor.csv':
 		df.at[110, 'first_name'] = 'Laura'
