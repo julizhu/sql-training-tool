@@ -17,7 +17,7 @@ create table film(
  description varchar(300),
  release_year double precision,
  language_id double precision,
- rental_duration int,
+ rental_duration double precision,
  rental_rate double precision,
  length int,
  replacement_cost double precision,
@@ -45,7 +45,7 @@ create table address(
  address2 varchar(200),
  district varchar(100),
  city_id double precision,
- postal_code int,
+ postal_code double precision,
  phone varchar(20),
  last_update varchar(50)
 );
@@ -102,7 +102,7 @@ create table rental(
  rental_id double precision primary key,
  rental_date timestamp,
  inventory_id double precision,
- customer_id int,
+ customer_id double precision,
  return_date timestamp,
  staff_id int,
  last_update timestamp
@@ -125,7 +125,7 @@ create table staff(
 create table store(
  store_id int,
  manager_staff_id double precision,
- address_id int,
+ address_id double precision,
  last_update varchar(50)
 );
 
