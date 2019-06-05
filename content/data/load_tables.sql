@@ -103,7 +103,7 @@ create table rental(
  rental_date timestamp,
  inventory_id double precision,
  customer_id double precision,
- return_date timestamp,
+ return_date varchar(50),
  staff_id double precision,
  last_update timestamp
 );
