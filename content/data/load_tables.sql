@@ -16,7 +16,7 @@ create table film(
  title varchar(150),
  description varchar(300),
  release_year double precision,
- language_id int,
+ language_id double precision,
  rental_duration int,
  rental_rate double precision,
  length int,
@@ -44,7 +44,7 @@ create table address(
  address varchar(200),
  address2 varchar(200),
  district varchar(100),
- city_id int,
+ city_id double precision,
  postal_code int,
  phone varchar(20),
  last_update varchar(50)
@@ -53,7 +53,7 @@ create table address(
 create table city(
  city_id int primary key,
  city varchar(50),
- country_id int, 
+ country_id double precision, 
  last_update timestamp
 );
 
@@ -70,14 +70,14 @@ create table customer(
  last_name varchar(100),
  email varchar(100),
  address_id varchar(100),
- active_bool varchar(5),
+ active_bool varchar(10),
  create_date timestamp,
  last_update timestamp,
- active varchar(5)
+ active varchar(10)
 );
 
 create table inventory(
- inventory_id varchar(5) primary key,
+ inventory_id varchar(20) primary key,
  film_id float,
  store_id float,
  last_update timestamp
@@ -92,16 +92,16 @@ create table language(
 create table payment(
  payment_id int primary key,
  customer_id float,
- staff_id varchar(5),
- rental_id varchar(5),
+ staff_id varchar(10),
+ rental_id varchar(10),
  amount varchar(10),
  payment_date timestamp
 );
 
 create table rental(
- rental_id int primary key,
+ rental_id double precision primary key,
  rental_date timestamp,
- inventory_id int,
+ inventory_id double precision,
  customer_id int,
  return_date timestamp,
  staff_id int,
@@ -115,7 +115,7 @@ create table staff(
  address_id varchar(10),
  email varchar(100),
  store_id varchar(10),
- active varchar(5),
+ active varchar(10),
  username varchar(100),
  password varchar(100),
  last_update varchar(100),
@@ -124,7 +124,7 @@ create table staff(
 
 create table store(
  store_id int,
- manager_staff_id int,
+ manager_staff_id double precision,
  address_id int,
  last_update varchar(50)
 );
